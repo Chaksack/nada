@@ -1,0 +1,206 @@
+{
+  "project_path": ".",
+  "timestamp": "2025-09-13T12:43:27.893254Z",
+  "grade": "F",
+  "score": 0,
+  "issues": [
+    {
+      "type": "code_smell",
+      "severity": "medium",
+      "file": "main.go",
+      "line": 219,
+      "column": 1,
+      "message": "High cyclomatic complexity",
+      "rule": "high_complexity",
+      "description": "Function 'analyzeFileContent' has complexity 11 (threshold: 10)"
+    },
+    {
+      "type": "code_smell",
+      "severity": "medium",
+      "file": "main.go",
+      "line": 257,
+      "column": 6,
+      "message": "Deep nesting detected",
+      "rule": "deep_nesting",
+      "description": "Code is nested 5 levels deep (threshold: 4)"
+    },
+    {
+      "type": "code_smell",
+      "severity": "medium",
+      "file": "main.go",
+      "line": 648,
+      "column": 1,
+      "message": "Function too large",
+      "rule": "large_function",
+      "description": "Function 'printReport' has 52 lines (threshold: 50)"
+    },
+    {
+      "type": "code_smell",
+      "severity": "medium",
+      "file": "main.go",
+      "line": 727,
+      "column": 1,
+      "message": "Function too large",
+      "rule": "large_function",
+      "description": "Function 'startWebServer' has 59 lines (threshold: 50)"
+    },
+    {
+      "type": "code_smell",
+      "severity": "low",
+      "file": "main.go",
+      "line": 238,
+      "column": 1,
+      "message": "Line too long",
+      "rule": "long_line",
+      "description": "Line has 122 characters (threshold: 120)"
+    },
+    {
+      "type": "code_smell",
+      "severity": "low",
+      "file": "main.go",
+      "line": 258,
+      "column": 1,
+      "message": "Line too long",
+      "rule": "long_line",
+      "description": "Line has 143 characters (threshold: 120)"
+    },
+    {
+      "type": "vulnerability",
+      "severity": "high",
+      "file": "main.go",
+      "line": 434,
+      "column": 1,
+      "message": "Disallow hardcoded password strings.",
+      "rule": "no-hardcoded-password",
+      "description": "Matched custom rule pattern"
+    },
+    {
+      "type": "code_smell",
+      "severity": "medium",
+      "file": "main.go",
+      "line": 450,
+      "column": 1,
+      "message": "Disallow TODO comments in code.",
+      "rule": "no-todo-comments",
+      "description": "Matched custom rule pattern"
+    },
+    {
+      "type": "code_smell",
+      "severity": "medium",
+      "file": "main.go",
+      "line": 457,
+      "column": 1,
+      "message": "Disallow TODO comments in code.",
+      "rule": "no-todo-comments",
+      "description": "Matched custom rule pattern"
+    },
+    {
+      "type": "code_smell",
+      "severity": "medium",
+      "file": "main.go",
+      "line": 458,
+      "column": 1,
+      "message": "Disallow TODO comments in code.",
+      "rule": "no-todo-comments",
+      "description": "Matched custom rule pattern"
+    },
+    {
+      "type": "code_smell",
+      "severity": "low",
+      "file": "main.go",
+      "line": 493,
+      "column": 1,
+      "message": "Blank import",
+      "rule": "blank_import",
+      "description": "Consider if this blank import is necessary"
+    },
+    {
+      "type": "code_smell",
+      "severity": "low",
+      "file": "main.go",
+      "line": 495,
+      "column": 1,
+      "message": "Blank import",
+      "rule": "blank_import",
+      "description": "Consider if this blank import is necessary"
+    },
+    {
+      "type": "code_smell",
+      "severity": "low",
+      "file": "main.go",
+      "line": 534,
+      "column": 1,
+      "message": "Line too long",
+      "rule": "long_line",
+      "description": "Line has 121 characters (threshold: 120)"
+    },
+    {
+      "type": "code_smell",
+      "severity": "low",
+      "file": "main.go",
+      "line": 702,
+      "column": 1,
+      "message": "Missing function documentation",
+      "rule": "missing_documentation",
+      "description": "Public functions should have documentation comments"
+    },
+    {
+      "type": "code_smell",
+      "severity": "low",
+      "file": "main.go",
+      "line": 788,
+      "column": 1,
+      "message": "Missing function documentation",
+      "rule": "missing_documentation",
+      "description": "Public functions should have documentation comments"
+    },
+    {
+      "type": "vulnerability",
+      "severity": "high",
+      "file": "test-project/sample.go",
+      "line": 9,
+      "column": 1,
+      "message": "Hardcoded API key",
+      "rule": "hardcoded_secret",
+      "description": "Hardcoded secrets should be moved to environment variables or secure configuration"
+    },
+    {
+      "type": "code_smell",
+      "severity": "low",
+      "file": "test-project/sample.go",
+      "line": 37,
+      "column": 1,
+      "message": "TODO/FIXME comment",
+      "rule": "todo_comment",
+      "description": "Consider addressing this TODO/FIXME comment"
+    },
+    {
+      "type": "code_smell",
+      "severity": "medium",
+      "file": "test-project/sample.go",
+      "line": 37,
+      "column": 1,
+      "message": "Disallow TODO comments in code.",
+      "rule": "no-todo-comments",
+      "description": "Matched custom rule pattern"
+    }
+  ],
+  "metrics": {
+    "lines_of_code": 880,
+    "cyclomatic_complexity": 136,
+    "code_duplication": 0,
+    "test_coverage": 0,
+    "technical_debt": "",
+    "maintainability": "",
+    "reliability": "",
+    "security": ""
+  },
+  "files_analyzed": 3,
+  "issues_summary": {
+    "code_smell": 16,
+    "high": 2,
+    "low": 8,
+    "medium": 8,
+    "vulnerability": 2
+  }
+}

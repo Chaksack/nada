@@ -1,0 +1,23 @@
+# Nada Custom Rule Configuration Example
+
+# This file defines custom static analysis rules for Nada.
+# Place this file as `nada.yaml` or `.nada.yaml` in your project root.
+
+rules:
+  - id: no-todo-comments
+    description: "Disallow TODO comments in code."
+    pattern: "TODO"
+    severity: "medium"
+    type: "code_smell"
+
+  - id: max-function-length
+    description: "Warn if a function exceeds 40 lines."
+    max_lines: 40
+    severity: "low"
+    type: "code_smell"
+
+  - id: no-hardcoded-password
+    description: "Disallow hardcoded password strings."
+    pattern: "password"
+    severity: "high"
+    type: "vulnerability"
