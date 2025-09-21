@@ -430,5 +430,53 @@ nada analyze . --diff=unstaged</code></pre>
         </div>
     </footer>
 
+    <script>
+        // Copy button functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyButtons = document.querySelectorAll('.copy-button');
+            
+            copyButtons.forEach(button => {
+                button.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const originalText = this.textContent;
+                    
+                    try {
+                        await navigator.clipboard.writeText(textToCopy);
+                        this.textContent = 'Copied!';
+                        this.style.background = '#10b981';
+                        
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                            this.style.background = '';
+                        }, 2000);
+                    } catch (err) {
+                        // Fallback for older browsers
+                        const textArea = document.createElement('textarea');
+                        textArea.value = textToCopy;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        
+                        try {
+                            document.execCommand('copy');
+                            this.textContent = 'Copied!';
+                            this.style.background = '#10b981';
+                            
+                            setTimeout(() => {
+                                this.textContent = originalText;
+                                this.style.background = '';
+                            }, 2000);
+                        } catch (fallbackErr) {
+                            this.textContent = 'Failed to copy';
+                            setTimeout(() => {
+                                this.textContent = originalText;
+                            }, 2000);
+                        }
+                        
+                        document.body.removeChild(textArea);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
