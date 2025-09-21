@@ -34,6 +34,7 @@ func (r *StructureRule) Check(file string, node ast.Node, content string, fset *
 		issues = append(issues, r.checkUnusedCode(file, lineNum, line)...)
 	}
 
+	fmt.Printf("Returning issues: %+v\n", issues)
 	return issues
 }
 
@@ -62,6 +63,7 @@ func (r *StructureRule) checkTodoComments(file string, lineNum int, line string)
 func (r *StructureRule) checkLineLength(file string, lineNum int, line string) []types.Issue {
 	var issues []types.Issue
 	if len(line) > 120 {
+		fmt.Printf("Found long line: %d\n", len(line))
 		issues = append(issues, types.Issue{
 			Type:        types.TypeCodeSmell,
 			Severity:    types.SeverityLow,

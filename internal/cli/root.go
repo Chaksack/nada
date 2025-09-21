@@ -113,10 +113,10 @@ func runAnalyze(cmd *cobra.Command, args []string) error {
 
 // runVersion shows version information
 func runVersion(cmd *cobra.Command, args []string) {
-	fmt.Printf("Nada %s\n", version)
-	fmt.Printf("Build time: %s\n", buildTime)
-	fmt.Printf("Commit: %s\n", commit)
-	fmt.Printf("Author: Andrew Chakdahah (@chaksack)\n")
+	fmt.Fprintln(cmd.OutOrStdout(), "Nada", version)
+	fmt.Fprintln(cmd.OutOrStdout(), "Build time:", buildTime)
+	fmt.Fprintln(cmd.OutOrStdout(), "Commit:", commit)
+	fmt.Fprintln(cmd.OutOrStdout(), "Author: Andrew Chakdahah (@chaksack)")
 }
 
 // saveReport saves the analysis report to a JSON file
